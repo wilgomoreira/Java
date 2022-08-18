@@ -15,7 +15,7 @@ public class WrapperTeste01 {
         char charP = 'W';
         boolean booleanP = false;
 
-        // variaveis like Class, Object: using like references, using methods and list, collections
+        // variaveis like Class, Object: using like references, used for methods, list, collections
 
         Byte byteW = 1;
         Short shoWtW = 1;

@@ -7,8 +7,8 @@ public class StringTeste02 {
         String nome = " Davi ";
         String numeros = "897284";
 
-        // some methods the class String
 
+        // some methods the class String
         System.out.println(nome.charAt(4)); // Char in position "n"
         System.out.println(nome.length());
         System.out.println(nome.replace("Da","Ra"));

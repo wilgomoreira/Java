@@ -12,7 +12,7 @@ public class StringTeste01 {
 
         String nome2 = "Wilgo";
 
-        System.out.println(nome == nome2);
+        System.out.println(nome == nome2); // true
 
         nome.concat("Moreira");
 
@@ -25,7 +25,7 @@ public class StringTeste01 {
         String nome4 = new String("Wilgo");   // cria-se um novo espaço de memoria, portanto será outro objeto. Fora da Piscina de String
         // essa forma de criar String nunca é usado
 
-        System.out.println(nome == nome4);
+        System.out.println(nome == nome4); // falso
 
         System.out.println(nome == nome4.intern());  // usando esse metodo é possível pegar objeto no pool de piscina
         // nesse caso é verdadeiro a igualdade
