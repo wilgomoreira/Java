@@ -1,4 +1,4 @@
-package site.wilgo.maratonajava.javacore.Rdates;
+package site.wilgo.maratonajava.javacore.SformatacaoTeste;
 
 import java.text.DateFormat;
 import java.util.Calendar;
