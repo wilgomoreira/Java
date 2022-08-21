@@ -1,4 +1,4 @@
-package site.wilgo.maratonajava.javacore.Rdates;
+package site.wilgo.maratonajava.javacore.Rdates.Teste;
 
 import java.time.LocalTime;
 
