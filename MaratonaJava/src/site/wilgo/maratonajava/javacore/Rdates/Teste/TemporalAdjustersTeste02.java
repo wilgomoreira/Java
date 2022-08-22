@@ -2,6 +2,7 @@ package site.wilgo.maratonajava.javacore.Rdates.Teste;
 
 import site.wilgo.maratonajava.javacore.Rdates.dominio.WorkDay;
 
+// made for me with classes
 
 public class TemporalAdjustersTeste02 {
     public static void main(String[] args) {
@@ -10,14 +11,13 @@ public class TemporalAdjustersTeste02 {
 
         WorkDay workDay = new WorkDay(date);
 
+        System.out.println(workDay);
+
     }
 }
 
 
-
-
-
-// Made for me
+// Made for me with structural programming
 
         /*LocalDate localDate = LocalDate.parse(date);
 

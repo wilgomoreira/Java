@@ -14,7 +14,6 @@ public class WorkDay {
         this.dayOfWeek = date.getDayOfWeek();
 
         checkWorkDay();
-        print();
     }
 
     private void checkWorkDay(){
@@ -29,11 +28,11 @@ public class WorkDay {
         }
     }
 
-    private void print(){
-        System.out.print("Day: " +date);
-        System.out.println("  Day of Week: " +date.getDayOfWeek());
-        System.out.print("Next workday: " +workDay);
-        System.out.println("  Day of Week: " +workDay.getDayOfWeek());
+    @Override
+    public String toString() {
+        return "Day: " +date+ " Day of Week: " +date.getDayOfWeek()+ "\n"+
+                "Next workday: " +workDay+ " Day of Week: " +workDay.getDayOfWeek();
+
     }
 
 }
