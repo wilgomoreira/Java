@@ -13,12 +13,12 @@ public class PatternMatcherTeste02 {
         // \w = a-Z A-Z, digitos, _
         // \W = tudo que não for incluso no \w
 
-        String regex = "aba";    //palavra para procurar
+        String regex = "\\w";    //palavra para procurar
         String texto1 = "abaaba";
         String texto2 = "abababa";
         String texto3 = "#@jjj_h2 897fffewf34";
 
-        Pattern pattern = Pattern.compile("\\W");   // transformar a palavra em um padrão para procurar
+        Pattern pattern = Pattern.compile(regex);   // transformar a palavra em um padrão para procurar
         // da o match para achar no texto. texto um está facil de achar, texto 2 ja esta dificil a logica a seguir
         Matcher matcher = pattern.matcher(texto3);
 
