@@ -11,7 +11,7 @@ public class FileWriterTeste01 {
         // nesse caso ele abre o arquivo, apaga tudo e escreve o texto
        /* try(FileWriter fw = new FileWriter(file)){   // colocando dentro do try, o try fica encarregado de fechar o arquivo depois
             fw.write("O curso é muito bom e bem prático \n Serve para toda a familia");
-
+            fw.flush(); // usada para cuspir o texto
         } catch (IOException e) {
             throw new RuntimeException(e);
         }*/

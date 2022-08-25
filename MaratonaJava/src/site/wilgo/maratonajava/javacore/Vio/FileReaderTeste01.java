@@ -9,7 +9,7 @@ public class FileReaderTeste01 {
     public static void main(String[] args) {
         File file = new File("arquivo.txt");
 
-        try {FileReader fr = new FileReader(file); // colocando dentro do try, o try fica encarregado de fechar o arquivo depois
+        try(FileReader fr = new FileReader(file)){ // colocando dentro do try, o try fica encarregado de fechar o arquivo depois
             /*char[] in = new char[100];
             fr.read(in);
             for(char ch : in) {
@@ -19,8 +19,8 @@ public class FileReaderTeste01 {
 
             int i;
 
-            while((i=fr.read()) != -1){
-                System.out.print((char)i);    // lembrar que ele retorna numeros ASCII, tem que converter para char
+            while((i=fr.read()) != -1){   // -1 representa o final do arquivo
+                System.out.print((char)i);    // lembrar que ele retorna numeros ASCII, tem que converter para char Usando Casting para isso
             }
 
 
