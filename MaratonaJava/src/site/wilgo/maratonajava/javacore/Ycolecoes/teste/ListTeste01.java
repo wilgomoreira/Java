@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ListTeste01 {
     public static void main(String[] args) {
+
+        //List é uma inferface generica que tem várias classes abaixo dela, uma delas é a ArrayList
         List<String> nomes = new ArrayList<>();  //capacidade inicial é 16, que vai aumentando a medida que vai se usando além desse limite
 
         nomes.add("Schumacher");

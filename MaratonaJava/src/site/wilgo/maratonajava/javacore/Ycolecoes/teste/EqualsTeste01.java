@@ -10,7 +10,7 @@ public class EqualsTeste01 {
 
         System.out.println(s1.equals(s2));   // vai dar falso porque eles se referem a objetos diferentes na memoria
 
-        s2 = s1;
+        s2 = s1;   // igualando as duas referências
 
         System.out.println(s1.equals(s2));  // agora assim será verdadeiro, pois faz referencia ao mesmo objeto da memoria
     }

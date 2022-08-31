@@ -9,10 +9,10 @@ public class Smartphone {
         this.marca = marca;
     }
 
-    // apertar CTRL+O para acessar o menu e escolher a opção sobrescrever o metodo Equals
-    // Reflexivo: x.equals(x) que ser true para tudo que for diferente de null
-    // Simetrico: para x e y diferentes de null, se x.equals(y) igual a true, logo, y.equals(x) igual a true também
-    // transitividade: para x, y e z, diferentes de null, se x.equals(y) é true, e x.equals(z) é true, logo, y.equals(z) também é true
+    // apertar CTRL+O para acessar o menu e escolher a opção sobrescrever o metodo Equals. Propriedades do equals:
+    // Reflexivo: x.equals(x) == true para tudo que for diferente de null
+    // Simetrico: para x e y diferentes de null, se x.equals(y) == true, logo, y.equals(x) == true também
+    // transitividade: para x, y e z, diferentes de null, se x.equals(y) == true, e x.equals(z) == true, logo, y.equals(z) == true também
     // consistente: x.equals(x) sempre retorna true se x for diferente de null
     // para x diferente de null, x.equals(null) tem que retornar false.
 
@@ -33,6 +33,14 @@ public class Smartphone {
     @Override
     public int hashCode() {
         return serialNumber == null ? 0 : this.serialNumber.hashCode();   // chama o JAVA para gerar o hash
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
     }
 
     public String getSerialNumber() {
