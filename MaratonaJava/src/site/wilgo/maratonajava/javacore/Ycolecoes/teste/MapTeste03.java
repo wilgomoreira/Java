@@ -18,16 +18,16 @@ public class MapTeste03 {
         Manga manga4 = new Manga(3L,"Yugio",2.56);
         Manga manga5 = new Manga(4L,"Tarzan", 99.0);
 
-        List<Manga> mangaConsumidor1 = List.of(manga1, manga2, manga3);
-        List<Manga> mangaConsumidor2 = List.of(manga4, manga5);
+        List<Manga> mangaList1 = List.of(manga1, manga2, manga3);
+        List<Manga> mangaList2 = List.of(manga4, manga5);
 
 
-        Map<Consumidor, List<Manga>> consumidorlistMap = new HashMap<>();
+        Map<Consumidor, List<Manga>> consumidorMangaMap = new HashMap<>();
 
-        consumidorlistMap.put(consumidor1, mangaConsumidor1);
-        consumidorlistMap.put(consumidor2, mangaConsumidor2);
+        consumidorMangaMap.put(consumidor1, mangaList1);
+        consumidorMangaMap.put(consumidor2, mangaList2);
 
-        for(Map.Entry<Consumidor, List<Manga>> entry : consumidorlistMap.entrySet()){
+        for(Map.Entry<Consumidor, List<Manga>> entry : consumidorMangaMap.entrySet()){
             System.out.println("--" +entry.getKey().getNome());
 
             for(Manga manga : entry.getValue()){
