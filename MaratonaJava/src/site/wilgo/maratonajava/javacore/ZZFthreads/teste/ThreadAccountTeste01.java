@@ -19,7 +19,11 @@ public class ThreadAccountTeste01 implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            withdrawl(10);
+            try {
+                withdrawl(10);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             if(account.getBalance() < 0){
                 System.out.println("LASCOU");
             }
@@ -27,11 +31,14 @@ public class ThreadAccountTeste01 implements Runnable {
 
     }
 
-
-    private void withdrawl(int amount) {
+// o metodo fica bloqueado para que a Thread que começou termine, não pode outra Thread entrar para executar
+    private synchronized void withdrawl(int amount) throws InterruptedException {
         if (account.getBalance() >= amount) {
             System.out.println(getThradeName() + " está indo sacar dinheiro");
             account.withdrawl(amount);
+
+            Thread.sleep(1000);
+
             System.out.println(getThradeName() + " completou o saque, o valor atual da conta: " + account.getBalance());
         } else {
             System.out.println(getThradeName() + " Sem dinheiro para sacar " + account.getBalance());
