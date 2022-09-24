@@ -1,7 +1,9 @@
 package site.wilgo.maratonajava.javacore.ZZGBuilder.dominio;
 
 public interface Currency {
+
     String getSymbol();
+
 }
 
 class Real implements Currency{
